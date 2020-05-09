@@ -4,8 +4,8 @@ staging:
   environment: staging
   description: 'Staging'
   payload:
-#    value_files: ["./config/staging.yml", "./config/common.yml"]
-    value_files: ["./config/staging.yml"]
+    value_files: ["./config/staging.yml", "./config/common.yml"]
+#    value_files: ["./config/staging.yml"]
     release: staging-myapp
     namespace: example-helm
     track: stable
