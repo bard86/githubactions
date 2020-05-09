@@ -4,4 +4,4 @@
 
 image:
   repository: docker.pkg.github.com/bard86/githubactions/githubactionsdemo
-  tag: latest
+  tag: 3aa
