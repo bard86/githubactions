@@ -21,8 +21,15 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Build, tag, publish
-      uses: mattdavis0351/actions/docker-gpr@v1
+    - name: Docker Build, Tag, Push to GitHub Package
+      uses: opspresso/action-docker@master
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        image-name: githubactionsdemo
+        args: --docker
+      env:
+        USERNAME: ${{ secrets.GITHUB_USERNAME }}
+        PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+        REGISTRY: "docker.pkg.github.com"
+        DOCKERFILE: "Dockerfile"
+        IMAGE_NAME: "githubactionsdemo"
+        TAG_NAME: "latest"
+        LATEST: "true"
