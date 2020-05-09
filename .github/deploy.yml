@@ -1,0 +1,12 @@
+staging:
+  auto_deploy_on: refs/heads/master
+  required_contexts: ["build"]
+  environment: staging
+  description: 'Staging'
+  payload:
+    value_files: ["./config/staging.yml", "./config/_common.yml"]
+    release: staging-myapp
+    namespace: example-helm
+    track: stable
+    values:
+      replicaCount: 1
