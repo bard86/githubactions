@@ -5,3 +5,5 @@
 image:
   repository: docker.pkg.github.com/bard86/githubactions/githubactionsdemo
   tag: latest
+
+imagePullSecrets: [github-pkg]
