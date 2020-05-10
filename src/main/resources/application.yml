@@ -1,0 +1,6 @@
+management:
+  port: 9000
+  security:
+    enabled: false
+server:
+  port: 80
